@@ -1,0 +1,22 @@
+.container h1 {
+  margin-top: 0px;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.weather-app-wrapper .weather-app {
+  margin-top: 48px;
+}
+.logo {
+  max-width: 100px;
+  margin: 0 auto;
+  display: block;
+  position: absolute;
+  right: 80px;
+  top: 50px;
+}
