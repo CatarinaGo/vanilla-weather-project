@@ -13,10 +13,10 @@
   margin-top: 48px;
 }
 .logo {
-  max-width: 100px;
-  margin: 0 auto;
-  display: block;
-  position: absolute;
-  right: 80px;
-  top: 50px;
+  max-width: 10%;
+  position: fixed;
+  top: 70px;
+  bottom: 40px;
+  left: 800px;
+  right: 10px;
 }
