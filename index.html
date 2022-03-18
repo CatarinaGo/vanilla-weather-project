@@ -21,9 +21,11 @@
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
-        <div class="weather-app border p-5 mt-3 border-light rounded shadow p-3 mb-5 bg-white rounded">
+        <div
+          class="weather-app border p-5 mt-3 border-light rounded shadow p-3 mb-5 bg-white rounded"
+        >
+          <img src="images/weatherapp.svg" class="logo" />
           <h1>WeatherApp</h1>
-          <img src="images/weatherapp.svg" class="logo" />  
           <form id="submit-form">
             <div class="form-group">
               <div class="input-group mb-3">
@@ -49,27 +51,66 @@
               </div>
             </div>
           </form>
-                
-        <section >
+          <section>
             <h4 id="search-city"></h4>
             <h4 id="current-city"></h4>
             <h5 id="current-date"></h5>
             <br />
             <div class="card-deck">
-            <div class="card">
-               <i class="fas fa-cloud-sun"></i>
+              <div class="card">
+                <i class="fas fa-cloud-sun"></i>
                 <div class="card-body">
-                <h5 class="card-title" id="tempone"></h5>
-                <p class="card-text" id="dayone"></p>
-                <p class="card-text">
+                  <h5 class="card-title" id="tempone"></h5>
+                  <p class="card-text" id="dayone"></p>
+                  <p class="card-text">
                     <small class="text-muted" id="descriptionone"></small><br />
                     <small class="text-muted" id="wind"></small><br />
                     <small class="text-muted" id="humidity"></small>
-                </p>
+                  </p>
                 </div>
+              </div>
+              <div class="card">
+                <i class="fas fa-sun"></i>
+                <div class="card-body">
+                  <h5 class="card-title" id="temptwo"></h5>
+                  <p class="card-text">Tuesday</p>
+                  <p class="card-text">
+                    <small class="text-muted">Sunny</small>
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <i class="fas fa-sun"></i>
+                <div class="card-body">
+                  <h5 class="card-title" id="tempthree"></h5>
+                  <p class="card-text">Wednesday</p>
+                  <p class="card-text">
+                    <small class="text-muted">Sunny</small>
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <i class="fas fa-wind"></i>
+                <div class="card-body">
+                  <h5 class="card-title" id="tempfour"></h5>
+                  <p class="card-text">Thursday</p>
+                  <p class="card-text">
+                    <small class="text-muted">Windy</small>
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <i class="fas fa-cloud-rain"></i>
+                <div class="card-body">
+                  <h5 class="card-title" id="tempfive"></h5>
+                  <p class="card-text">Friday</p>
+                  <p class="card-text">
+                    <small class="text-muted">Rainy </small>
+                  </p>
+                </div>
+              </div>
             </div>
-            
-        </section>
+          </section>
         </div>
       </div>
     </div>
