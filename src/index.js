@@ -1,6 +1,5 @@
-let today = new Date();
-
-function formatDate(today) {
+function formatDate(timestamp) {
+  let today = new Date(timestamp);
   let weekDays = [
     "Sunday",
     "Monday",
@@ -14,17 +13,16 @@ function formatDate(today) {
   let weekDay = today.getDay();
   let weekDayFinal = weekDays[weekDay];
   let hours = today.getHours();
-  let minutes = (today.getMinutes() < 10 ? "0" : "") + today.getMinutes();
+  let minutes = today.getMinutes();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
 
-  let currentDate = `${weekDayFinal}, ${hours}:${minutes}`;
-
-  return currentDate;
+  return `${weekDayFinal}, ${hours}:${minutes}`;
 }
-let feature = formatDate(today);
-let display = document.getElementById("current-date");
-console.log(display);
-console.log(feature.substring(24, 32));
-display.innerHTML = feature;
 
 function handleSubmit(event) {
   let city = document.querySelector("#userInput");
@@ -47,12 +45,14 @@ function getTempCity(response) {
   let currentDescription = document.querySelector("#descriptionone");
   let currentWind = document.querySelector("#wind");
   let currentHumidity = document.querySelector("#humidity");
+  let dateElement = document.getElementById("current-date");
   console.log(response.data);
   tempToday.innerHTML = `${temp}°C`;
   currentCity.innerHTML = `${response.data.name}`;
   currentDescription.innerHTML = `${response.data.weather[0].description}`;
   currentWind.innerHTML = `Wind: ${wind} m/s`;
   currentHumidity.innerHTML = `Humidity: ${humidity} %`;
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function showPosition(response) {
