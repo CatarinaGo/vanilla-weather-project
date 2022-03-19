@@ -46,6 +46,7 @@ function getTempCity(response) {
   let currentWind = document.querySelector("#wind");
   let currentHumidity = document.querySelector("#humidity");
   let dateElement = document.getElementById("current-date");
+  let iconElement = document.querySelector("#icon");
   console.log(response.data);
   tempToday.innerHTML = `${temp}°C`;
   currentCity.innerHTML = `${response.data.name}`;
@@ -53,6 +54,10 @@ function getTempCity(response) {
   currentWind.innerHTML = `Wind: ${wind} m/s`;
   currentHumidity.innerHTML = `Humidity: ${humidity} %`;
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function showPosition(response) {

@@ -14,7 +14,6 @@
 }
 .logo {
   max-width: 20%;
-
   position: static;
   margin: 0 auto;
   left: auto;
@@ -31,4 +30,10 @@
 }
 .text-muted {
   font-size: 70%;
+}
+.icon {
+  max-width: 50%;
+  display: block;
+  margin: 0 auto;
+  color: #17a2b8;
 }
