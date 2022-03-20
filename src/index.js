@@ -33,8 +33,6 @@ function handleSubmit(event) {
   event.preventDefault();
   axios.get(urlApi).then(getTempCity);
 }
-let form = document.querySelector("#submit-form");
-form.addEventListener("submit", handleSubmit);
 
 function getTempCity(response) {
   let temp = Math.round(response.data.main.temp);
@@ -47,6 +45,8 @@ function getTempCity(response) {
   let currentHumidity = document.querySelector("#humidity");
   let dateElement = document.getElementById("current-date");
   let iconElement = document.querySelector("#icon");
+
+  celsiusTemp = response.data.main.temp;
   console.log(response.data);
   tempToday.innerHTML = `${temp}°C`;
   currentCity.innerHTML = `${response.data.name}`;
@@ -69,9 +69,31 @@ function showPosition(response) {
 
   axios.get(urlApi).then(getTempCity);
 }
-function getCurrentPosition() {
-  navigator.geolocation.getCurrentPosition(showPosition);
+//function getCurrentPosition() {
+//  navigator.geolocation.getCurrentPosition(showPosition);
+//}
+
+//let button = document.querySelector(".select");
+//button.addEventListener("click", getCurrentPosition);
+
+function changeTempFarh(event) {
+  event.preventDefault();
+  let tempfirst = document.querySelector("#tempone");
+  let ftemp = Math.round((celsiusTemp * 9) / 5 + 32);
+
+  tempfirst.innerHTML = `${ftemp}°F`;
+}
+function changeTempCel(event) {
+  event.preventDefault();
+  let tempfirst = document.querySelector("#tempone");
+  let celsius = Math.round(celsiusTemp);
+  tempfirst.innerHTML = `${celsius}°C`;
 }
 
-let button = document.querySelector(".select");
-//button.addEventListener("click", getCurrentPosition);
+let form = document.querySelector("#submit-form");
+form.addEventListener("submit", handleSubmit);
+let celsiusTemp = null;
+let changetempF = document.querySelector("#change-temp-one-F");
+let changetempC = document.querySelector("#change-temp-one-C");
+changetempF.addEventListener("click", changeTempFarh);
+changetempC.addEventListener("click", changeTempCel);
