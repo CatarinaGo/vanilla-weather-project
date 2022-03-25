@@ -90,6 +90,31 @@ function changeTempCel(event) {
   tempfirst.innerHTML = `${celsius}°C`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = "";
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="card">
+                <i class="fas fa-sun"></i>
+                <div class="card-body">
+                  <h5 class="card-title" id="temptwo"> 
+                    <div class="weather-forecast-temp">
+                      <span class="weather-forecast-temp-max">18</span>
+                      <span class="weather-forecast-temp-min">12</span>
+                    </div></h5>
+                  <p class="card-text weather-forecast-date">${day}</p>
+                  <p class="card-text">
+                  </p>
+                </div>
+              </div>`;
+
+    forecastElement.innerHTML = forecastHTML;
+  });
+}
 let form = document.querySelector("#submit-form");
 form.addEventListener("submit", handleSubmit);
 let celsiusTemp = null;
@@ -97,3 +122,4 @@ let changetempF = document.querySelector("#change-temp-one-F");
 let changetempC = document.querySelector("#change-temp-one-C");
 changetempF.addEventListener("click", changeTempFarh);
 changetempC.addEventListener("click", changeTempCel);
+displayForecast();
