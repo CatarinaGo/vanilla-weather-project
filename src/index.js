@@ -56,12 +56,14 @@ function getTempCity(response) {
 
   celsiusTemp = response.data.main.temp;
   console.log(response.data);
-  tempToday.innerHTML = `${temp}°C`;
+  tempToday.innerHTML = `Currently ${temp}°C`;
   currentCity.innerHTML = `${response.data.name}`;
   currentDescription.innerHTML = `${response.data.weather[0].description}`;
   currentWind.innerHTML = `Wind: ${wind} m/s`;
   currentHumidity.innerHTML = `Humidity: ${humidity} %`;
-  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  dateElement.innerHTML = `Last updated on ${formatDate(
+    response.data.dt * 1000
+  )}`;
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -120,10 +122,10 @@ function displayForecast(response) {
       forecastHTML =
         forecastHTML +
         `
-    <div class="card">
+    <div class="card text-center">
                 <img src="http://openweathermap.org/img/wn/${
                   forecastDay.weather[0].icon
-                }@2x.png" width="42"/>
+                }@2x.png" width="35" height="35" id="icontwo"/>
                 <div class="card-body">
                   <h5 class="card-title" id="temptwo"> 
                     <div class="weather-forecast-temp">
@@ -137,7 +139,9 @@ function displayForecast(response) {
                   <p class="card-text weather-forecast-date">${formatDay(
                     forecastDay.dt
                   )}</p>
-                  <p class="card-text">
+                  <p class="card-text  weather-forecast-description">${
+                    forecastDay.weather[0].description
+                  }
                   </p>
                 </div>
               </div>`;

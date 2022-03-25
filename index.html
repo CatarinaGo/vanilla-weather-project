@@ -55,36 +55,27 @@
           <section>
             <h4 id="search-city"></h4>
             <h4 id="current-city"></h4>
-            <h5>Last updated on <span id="current-date"></span></h5>
+            <h5><span id="current-date"></span></h5>
             <br />
-            <div class="row">
-                <div class="col-sm-6">
-                  <div class="card text-center border-info mb-3" style="max-width: 18rem;">
-                    <div class="card-header">
-                    <img src="" class="icon" id="icon" /></div>
-                      <h5 class="card-title" id="tempone"></h5>
-                      <p class="card-text" id="dayone">
-                        <small class="text-muted" id="descriptionone"></small><br />
-                        <small class="text-muted" id="wind"></small><br />
-                        <small class="text-muted" id="humidity"></small>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                  <div class="card text-center border-info mb-3" style="max-width: 18rem;">
-                    <div class="card-header"><img src="" class="icon" id="icon" /></div>
-                      <p>
-                          <a href="#" class="hyperlink" id="change-temp-one-C">C°</a> |
-                          <a href="#" class="hyperlink" id="change-temp-one-F"> F°</a>
-                        </p>
-                    </div>
-                  </div>
+            <p class="links" id="links">
+              <a href="#" class="hyperlink" id="change-temp-one-C">C°</a> |
+              <a href="#" class="hyperlink" id="change-temp-one-F"> F°</a>
+            </p>
+            <div class="card-deck" id="currentforecast">
+              <div class="card text-center">
+                <img src="" class="icon" id="icon" />
+                <h5 class="card-title" id="tempone"></h5>
+                <p class="card-text" id="dayone">
+                  <small class="text-muted" id="descriptionone"></small><br />
+                  <small class="text-muted" id="wind"></small><br />
+                  <small class="text-muted" id="humidity"></small>
+                </p>
+              </div>
             </div>
-            <div class="card-deck text-center" id="forecast"></div> 
-        </div> 
-      </div>
-    </section>
-  </div>
+            <br />
+            <div class="card-deck text-center" id="forecast"></div>
+          </section>
+        </div>
       </div>
       <p>
         <small>

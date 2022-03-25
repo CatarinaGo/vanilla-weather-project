@@ -4,6 +4,10 @@ p {
 i {
   padding: 5px 5px;
 }
+.links {
+  text-align: left;
+  font-size: small;
+}
 .container h1 {
   margin-top: 0px;
   font-size: 30px;
@@ -26,9 +30,9 @@ i {
   right: auto;
   display: block;
 }
-.tempone {
-  font-size: 10px;
-  font-weight: 300;
+#tempone {
+  font-size: 15px;
+  font-weight: 500;
 }
 #descriptionone {
   text-transform: capitalize;
@@ -45,12 +49,30 @@ i {
 .card-body {
   text-align: center;
 }
+
 .icon {
   max-width: 20%;
   display: block;
   margin: 0 auto;
   color: #17a2b8;
 }
+#icontwo {
+  display: block;
+  margin: 0 auto;
+}
+
 .weather-forecast-temp-min {
   opacity: 0.5;
+  font-size: 15px;
+}
+
+.weather-forecast-temp-max {
+  font-size: 15px;
+}
+.weather-forecast-date {
+  font-size: 12px;
+}
+.weather-forecast-description {
+  text-transform: capitalize;
+  font-size: 10px;
 }
