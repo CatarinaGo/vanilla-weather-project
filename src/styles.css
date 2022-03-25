@@ -1,6 +1,9 @@
 p {
   text-align: center;
 }
+i {
+  padding: 5px 5px;
+}
 .container h1 {
   margin-top: 0px;
   font-size: 30px;
@@ -23,18 +26,27 @@ p {
   right: auto;
   display: block;
 }
-
+.tempone {
+  font-size: 10px;
+  font-weight: 300;
+}
 #descriptionone {
   text-transform: capitalize;
 }
 .text-muted {
-  font-size: 90%;
+  font-size: 70%;
+}
+.card-header {
+  padding: 10px 10px;
+}
+.card-text {
+  margin-bottom: 12px;
 }
 .card-body {
   text-align: center;
 }
 .icon {
-  max-width: 50%;
+  max-width: 20%;
   display: block;
   margin: 0 auto;
   color: #17a2b8;
