@@ -58,6 +58,15 @@ function getTempCity(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  getForecast(response.data.coord);
+}
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "51f2d4f68f9aa7784343201bc371d158";
+  let urlApiForecast = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}`;
+  console.log(urlApiForecast);
+  axios.get(urlApiForecast).then(displayForecast);
 }
 
 function showPosition(response) {
@@ -90,7 +99,8 @@ function changeTempCel(event) {
   tempfirst.innerHTML = `${celsius}°C`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = "";
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -122,4 +132,3 @@ let changetempF = document.querySelector("#change-temp-one-F");
 let changetempC = document.querySelector("#change-temp-one-C");
 changetempF.addEventListener("click", changeTempFarh);
 changetempC.addEventListener("click", changeTempCel);
-displayForecast();
