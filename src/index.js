@@ -80,22 +80,6 @@ function getForecast(coordinates) {
   axios.get(urlApiForecast).then(displayForecast);
 }
 
-function showPosition(response) {
-  let longitude = response.coords.longitude;
-  let latitude = response.coords.latitude;
-  let apiKey = "51f2d4f68f9aa7784343201bc371d158";
-  let units = "metric";
-  let urlApi = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
-
-  axios.get(urlApi).then(getTempCity);
-}
-//function getCurrentPosition() {
-//  navigator.geolocation.getCurrentPosition(showPosition);
-//}
-
-//let button = document.querySelector(".select");
-//button.addEventListener("click", getCurrentPosition);
-
 function changeTempFarh(event) {
   event.preventDefault();
   let tempfirst = document.querySelector("#tempone");
