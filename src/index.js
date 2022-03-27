@@ -57,7 +57,7 @@ function getTempCity(response) {
   celsiusTemp = response.data.main.temp;
   console.log(response.data);
   tempToday.innerHTML = `Currently ${temp}°C`;
-  currentCity.innerHTML = `${response.data.name}`;
+  currentCity.innerHTML = `City of ${response.data.name}, Country ${response.data.sys.country}`;
   currentDescription.innerHTML = `${response.data.weather[0].description}`;
   currentWind.innerHTML = `Wind: ${wind} m/s`;
   currentHumidity.innerHTML = `Humidity: ${humidity} %`;
