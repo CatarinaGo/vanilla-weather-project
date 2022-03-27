@@ -1,18 +1,6 @@
 p {
   text-align: center;
 }
-i {
-  padding: 5px 5px;
-}
-.links {
-  text-align: left;
-  font-size: small;
-}
-.container h1 {
-  margin-top: 0px;
-  font-size: 30px;
-  margin-bottom: 20px;
-}
 
 .weather-app-wrapper {
   max-width: 700px;
@@ -22,6 +10,7 @@ i {
 .weather-app-wrapper .weather-app {
   margin: 30px auto;
 }
+
 .logo {
   max-width: 20%;
   position: static;
@@ -30,6 +19,29 @@ i {
   right: auto;
   display: block;
 }
+
+.container h1 {
+  margin-top: 0px;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.links {
+  text-align: left;
+  font-size: small;
+}
+
+.icon {
+  max-width: 20%;
+  display: block;
+  margin: 0 auto;
+  color: #17a2b8;
+}
+
+.text-muted {
+  font-size: 70%;
+}
+
 #tempone {
   font-size: 15px;
   font-weight: 500;
@@ -37,9 +49,7 @@ i {
 #descriptionone {
   text-transform: capitalize;
 }
-.text-muted {
-  font-size: 70%;
-}
+
 .card-header {
   padding: 10px 10px;
 }
@@ -50,12 +60,6 @@ i {
   text-align: center;
 }
 
-.icon {
-  max-width: 20%;
-  display: block;
-  margin: 0 auto;
-  color: #17a2b8;
-}
 #icontwo {
   display: block;
   margin: 0 auto;
