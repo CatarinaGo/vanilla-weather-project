@@ -55,7 +55,6 @@ function getTempCity(response) {
   let iconElement = document.querySelector("#icon");
 
   celsiusTemp = response.data.main.temp;
-  console.log(response.data);
   tempToday.innerHTML = `Currently ${temp}°C`;
   currentCity.innerHTML = `City of ${response.data.name}, Country ${response.data.sys.country}`;
   currentDescription.innerHTML = `${response.data.weather[0].description}`;
